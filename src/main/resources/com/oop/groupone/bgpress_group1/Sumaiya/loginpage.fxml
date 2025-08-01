@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.Loginpagecontroller">
+   <children>
+      <Label layoutX="259.0" layoutY="38.0" prefHeight="26.0" prefWidth="81.0" text="Login">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="useridTextfield" layoutX="132.0" layoutY="146.0" />
+      <Label layoutX="57.0" layoutY="146.0" prefHeight="26.0" prefWidth="52.0" text="User Id:" />
+      <Label layoutX="57.0" layoutY="206.0" text="Password:" />
+      <Button fx:id="loginbuttononaction" layoutX="175.0" layoutY="280.0" mnemonicParsing="false" onAction="#loginbuttononaction" text="Login" />
+      <PasswordField fx:id="passwordtextfield" layoutX="132.0" layoutY="202.0" />
+      <Button fx:id="createaccbuttononaction" layoutX="551.0" layoutY="381.0" mnemonicParsing="false" onAction="#createaccbuttononaction" text="Create Account" />
+   </children>
+</AnchorPane>
