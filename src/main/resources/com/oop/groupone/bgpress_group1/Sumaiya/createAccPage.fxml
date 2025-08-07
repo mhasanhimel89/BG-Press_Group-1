@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.CreateAccPagecontroller">
    <children>
       <Label layoutX="280.0" layoutY="40.0" text="Create Account">
@@ -18,8 +17,8 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="116.0" text="Full Name:" />
-      <Label layoutX="52.0" layoutY="162.0" text="email:" />
+      <Label layoutX="52.0" layoutY="116.0" text="User Id:" />
+      <Label layoutX="52.0" layoutY="162.0" text="Email:" />
       <Label layoutX="52.0" layoutY="216.0" text="Phone No:" />
       <Label layoutX="52.0" layoutY="266.0" text="Address" />
       <Label layoutX="386.0" layoutY="116.0" text="Gender:" />
@@ -38,5 +37,6 @@
       <Label fx:id="alertlabel" layoutX="175.0" layoutY="398.0" prefHeight="26.0" prefWidth="421.0" />
       <Label layoutX="384.0" layoutY="266.0" text="Account Type:" />
       <ComboBox fx:id="accountytpecombobox" layoutX="468.0" layoutY="262.0" prefWidth="150.0" />
+      <Button layoutX="605.0" layoutY="385.0" mnemonicParsing="false" onAction="#nextbuttononaction" text="Next" />
    </children>
 </AnchorPane>
