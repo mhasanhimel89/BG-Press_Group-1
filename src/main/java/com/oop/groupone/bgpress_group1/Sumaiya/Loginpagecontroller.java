@@ -79,9 +79,14 @@ public class Loginpagecontroller
                                 stage.setTitle("Head Manager Dashboard");
 
                             } else if (role.equalsIgnoreCase("Bg Staff")) {
+                                URL fxmlUrl = getClass().getResource("BGStaff.fxml");
+                                if (fxmlUrl == null) {
 
-                                alertlabel.setText("Bg Staff login not implemented yet.");
-                                return;
+                                    alertlabel.setText("Bg Staff FXML not found.");
+                                    return;
+                                }
+                                root = FXMLLoader.load(fxmlUrl);
+                                stage.setTitle("BG Staff");
                             }
 
 
