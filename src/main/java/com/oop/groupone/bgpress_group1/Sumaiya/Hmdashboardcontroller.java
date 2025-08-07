@@ -42,7 +42,13 @@ public class Hmdashboardcontroller
     }
 
     @javafx.fxml.FXML
-    public void jobrequestsoa(ActionEvent actionEvent) {
+    public void jobrequestsoa(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("jobrequests.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -66,6 +72,12 @@ public class Hmdashboardcontroller
     }
 
     @javafx.fxml.FXML
-    public void assignjoboa(ActionEvent actionEvent) {
+    public void assignjoboa(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("assignjob.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
     }
 }
