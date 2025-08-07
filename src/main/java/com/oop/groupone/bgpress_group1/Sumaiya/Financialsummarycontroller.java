@@ -5,44 +5,42 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.chart.BarChart;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class UupdateResourcecontroller
+public class Financialsummarycontroller
 {
+    @javafx.fxml.FXML
+    private BarChart barchart;
     @javafx.fxml.FXML
     private MenuBar menubar;
     @javafx.fxml.FXML
-    private ComboBox resourcecb;
+    private TableColumn profitcolumn;
     @javafx.fxml.FXML
-    private TableColumn itemscolumn;
+    private TableColumn revenuecolumn;
     @javafx.fxml.FXML
     private TableView tableview;
     @javafx.fxml.FXML
-    private TextField quantitytf;
+    private DatePicker datepicker;
     @javafx.fxml.FXML
-    private TextArea budgetta;
-    @javafx.fxml.FXML
-    private TableColumn quantitycolumn;
-    @javafx.fxml.FXML
-    private TextField upbudgettf;
+    private TableColumn expensecolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void updatebutton(ActionEvent actionEvent) {
+    public void filterdata(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void save(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void signut(ActionEvent actionEvent)  throws IOException {
+    public void signout(ActionEvent actionEvent) throws IOException {
         Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root= FXMLLoader.load(getClass().getResource("loginpage.fxml"));
         Scene scene = new Scene(root);
@@ -52,7 +50,7 @@ public class UupdateResourcecontroller
     }
 
     @javafx.fxml.FXML
-    public void home(ActionEvent actionEvent)  throws IOException {
+    public void home(ActionEvent actionEvent) throws IOException {
         Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root= FXMLLoader.load(getClass().getResource("hmdashboard.fxml"));
         Scene scene = new Scene(root);

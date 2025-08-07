@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.Feedbackcontroller">
+   <children>
+      <TableView fx:id="tableview" layoutX="255.0" layoutY="70.0" prefHeight="330.0" prefWidth="503.0">
+        <columns>
+          <TableColumn fx:id="useridcolumn" prefWidth="87.20001220703125" text="User id" />
+          <TableColumn fx:id="feedbackcolumn" prefWidth="210.4000244140625" text="Feedback" />
+            <TableColumn fx:id="datecolumn" minWidth="0.0" prefWidth="110.4000244140625" text="Date" />
+            <TableColumn fx:id="status" prefWidth="90.40008544921875" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="442.0" layoutY="410.0" mnemonicParsing="false" onAction="#viewfeedback" text="View Feedback" />
+      <VBox prefHeight="246.0" prefWidth="178.0">
+         <children>
+            <MenuBar fx:id="menubar">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button mnemonicParsing="false" onAction="#home" text="Home" />
+            <Button mnemonicParsing="false" onAction="#signout" text="Signout" />
+         </children>
+      </VBox>
+      <Label layoutX="384.0" layoutY="24.0" text="Handle Staff Feedback">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

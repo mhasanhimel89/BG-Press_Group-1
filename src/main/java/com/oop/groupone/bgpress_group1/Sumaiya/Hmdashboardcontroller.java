@@ -52,15 +52,33 @@ public class Hmdashboardcontroller
     }
 
     @javafx.fxml.FXML
-    public void viewfinancialsummaryoa(ActionEvent actionEvent) {
+    public void viewfinancialsummaryoa(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("financialsummary.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void feedbackoa(ActionEvent actionEvent) {
+    public void feedbackoa(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("feedback.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void updateoa(ActionEvent actionEvent) {
+    public void updateoa(ActionEvent actionEvent)  throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("UupdateResource.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
