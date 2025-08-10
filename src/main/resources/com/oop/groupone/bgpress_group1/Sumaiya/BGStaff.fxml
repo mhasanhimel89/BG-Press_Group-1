@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.BGStaffcontroller">
+   <children>
+      <VBox prefHeight="332.0" prefWidth="197.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button mnemonicParsing="false" onAction="#viewtask" text="View Assigned Task" />
+            <Button mnemonicParsing="false" onAction="#startprinting" text="Start a Printing Job" />
+            <Button mnemonicParsing="false" onAction="#updatejob" text="Update Job Progress" />
+            <Button mnemonicParsing="false" onAction="#Reportmachineissues" text="Report Machine Issues" />
+            <Button mnemonicParsing="false" onAction="#requestjob" text="Request New Job" />
+            <Button mnemonicParsing="false" onAction="#submitwork" text="Submit Completed Work" />
+            <Button mnemonicParsing="false" onAction="#feedback" text="Feedback" />
+            <Button mnemonicParsing="false" onAction="#viewsalary" text="View Salary" />
+            <Button mnemonicParsing="false" onAction="#signout" text="Signout" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

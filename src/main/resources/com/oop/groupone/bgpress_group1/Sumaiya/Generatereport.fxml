@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.GenerateReportcontroller">
+   <children>
+      <DatePicker layoutX="309.0" layoutY="115.0" />
+      <ComboBox layoutX="309.0" layoutY="162.0" prefWidth="150.0" />
+      <TextArea layoutX="274.0" layoutY="259.0" prefHeight="157.0" prefWidth="378.0" />
+      <Button layoutX="506.0" layoutY="162.0" mnemonicParsing="false" text="Generate Report" />
+      <Button layoutX="685.0" layoutY="400.0" mnemonicParsing="false" text="Export To PDF" />
+      <Label layoutX="247.0" layoutY="119.0" text="Start Date" />
+      <Label layoutX="509.0" layoutY="119.0" text="End Date" />
+      <DatePicker layoutX="572.0" layoutY="115.0" />
+      <Label layoutX="236.0" layoutY="166.0" text="Report Type" />
+      <Label layoutX="391.0" layoutY="234.0" text="Preview Of The  Report">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="23.0" text="Generate Weekly Report">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="318.0" prefWidth="166.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button mnemonicParsing="false" onAction="#home" text="Home" />
+            <Button mnemonicParsing="false" onAction="#signout" text="Signout" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

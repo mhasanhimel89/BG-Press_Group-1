@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.Schedulecontroller">
+   <children>
+      <TableView fx:id="tableview" layoutX="322.0" layoutY="291.0" prefHeight="134.0" prefWidth="338.0">
+        <columns>
+          <TableColumn fx:id="jobnamecolumn" prefWidth="75.0" text="Job Name" />
+          <TableColumn fx:id="statuscolumn" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="duedatecolumn" prefWidth="75.0" text="Due date" />
+            <TableColumn fx:id="assignedstaffcolumn" prefWidth="108.79998779296875" text="Assigned Staff" />
+        </columns>
+      </TableView>
+      <Button layoutX="628.0" layoutY="226.0" mnemonicParsing="false" onAction="#duedateoa" text="Due date" />
+      <DatePicker fx:id="choosedate" layoutX="621.0" layoutY="132.0" />
+      <Label layoutX="573.0" layoutY="85.0" prefHeight="33.0" prefWidth="204.0" text="Filtering the schedule">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="527.0" layoutY="136.0" text="Choose a date:" />
+      <Label layoutX="247.0" layoutY="82.0" text="Job Name:" />
+      <Label layoutX="257.0" layoutY="123.0" text="Status:" />
+      <Label layoutX="249.0" layoutY="156.0" text="Due date:" />
+      <Label layoutX="223.0" layoutY="194.0" text="Assigned Staff:" />
+      <TextField fx:id="jobnametextfield" layoutX="316.0" layoutY="78.0" />
+      <TextField fx:id="statustf" layoutX="316.0" layoutY="119.0" />
+      <TextField fx:id="assignedstafftf" layoutX="316.0" layoutY="190.0" />
+      <DatePicker fx:id="duedate" layoutX="316.0" layoutY="152.0" />
+      <Line endX="6.4000244140625" endY="-154.60000610351562" layoutX="512.0" layoutY="225.0" startX="6.4000244140625" startY="28.600006103515625" />
+      <VBox layoutX="14.0" layoutY="10.0" prefHeight="223.0" prefWidth="157.0">
+         <children>
+            <MenuBar fx:id="menubar">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button mnemonicParsing="false" onAction="#hmanagerdashboardoa" text="Head Manager Dashboard" />
+            <Button mnemonicParsing="false" onAction="#signoutoa" text="Signout" />
+         </children>
+      </VBox>
+      <Button layoutX="338.0" layoutY="226.0" mnemonicParsing="false" onAction="#saveoa" text="Save" />
+      <Label layoutX="27.0" layoutY="406.0" prefHeight="18.0" prefWidth="247.0" />
+   </children>
+</AnchorPane>
