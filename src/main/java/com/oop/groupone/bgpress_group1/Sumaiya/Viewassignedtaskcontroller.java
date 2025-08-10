@@ -5,45 +5,55 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Viewassignedtaskcontroller
 {
     @javafx.fxml.FXML
-    private TableColumn statuscolumn;
+    private TableView<assignjobClass> tableview;
     @javafx.fxml.FXML
-    private TableColumn actioncolumn;
+    private TableColumn<assignjobClass, LocalDate> duedatecolumn;
     @javafx.fxml.FXML
-    private TableColumn jobnamecolumn;
+    private TableColumn<assignjobClass, String> Assignedstaffcolumn;
     @javafx.fxml.FXML
-    private TableView tableview;
+    private TableColumn<assignjobClass, String>Jobnamecolumn;
+
+//    private String load="ViewAssignTask.bin";
     @javafx.fxml.FXML
-    private TableColumn jobidcolumn;
-    @javafx.fxml.FXML
-    private TableColumn duedatecolumn;
-    @javafx.fxml.FXML
-    private TableColumn prioritycolumn;
-    @javafx.fxml.FXML
-    private DatePicker datepicker;
-    @javafx.fxml.FXML
-    private TextField jobidtf;
+    private Label alertlabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+        Jobnamecolumn.setCellValueFactory(new PropertyValueFactory<>("Jobname"));
+        Assignedstaffcolumn.setCellValueFactory(new PropertyValueFactory<>("assignstaff"));
+        duedatecolumn.setCellValueFactory(new PropertyValueFactory<>("duedate"));
     }
+    ArrayList<assignjobClass> ViewtaskList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void load(ActionEvent actionEvent) {
-    }
+        try(ObjectInputStream stream = new ObjectInputStream(new FileInputStream("assignjob.bin"))){
+            while(true){
 
-    @javafx.fxml.FXML
-    public void searchtask(ActionEvent actionEvent) {
+               assignjobClass view=(assignjobClass) stream.readObject();
+               tableview.getItems().add(view);
+            }
+
+        }catch(EOFException e) {
+           alertlabel.setText("Loaded");
+        }catch (IOException e){
+            alertlabel.setText("Couldn't Load");
+            e.printStackTrace();
+        }catch (ClassNotFoundException e){
+            alertlabel.setText("something went wrong");
+            e.printStackTrace();
+        }
     }
 
     @javafx.fxml.FXML
