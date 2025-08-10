@@ -44,7 +44,13 @@ public class BGStaffcontroller
     }
 
     @javafx.fxml.FXML
-    public void requestjob(ActionEvent actionEvent) {
+    public void requestjob(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("requestnewjob.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML

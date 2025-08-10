@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.Jobrequestscontroller">
    <children>
       <VBox layoutY="7.0" prefHeight="309.0" prefWidth="155.0">
@@ -39,21 +38,20 @@
             <Button mnemonicParsing="false" onAction="#signout" text="Signout" />
          </children>
       </VBox>
-      <TableView fx:id="tableviewcolumn" layoutX="232.0" layoutY="127.0" prefHeight="195.0" prefWidth="374.0">
+      <TableView fx:id="tableview" layoutX="232.0" layoutY="127.0" prefHeight="195.0" prefWidth="366.0">
         <columns>
-          <TableColumn fx:id="jobidcolumn" prefWidth="75.0" text="Job Id" />
-          <TableColumn fx:id="requestercolumn" prefWidth="75.0" text="Requester" />
-            <TableColumn fx:id="duedatecolumn" prefWidth="75.0" text="Due Date" />
-            <TableColumn prefWidth="75.0" text="Priority" />
-            <TableColumn prefWidth="75.0" text="Checkbox" />
+          <TableColumn fx:id="staffidcolumn" prefWidth="121.60003662109375" text="Staff id" />
+          <TableColumn fx:id="jobnamecolumn" prefWidth="121.5999755859375" text="Job Name" />
+            <TableColumn fx:id="datecolumn" prefWidth="121.5999755859375" text="Date" />
         </columns>
       </TableView>
       <Button layoutX="314.0" layoutY="357.0" mnemonicParsing="false" onAction="#approve" text="Approve" />
-      <Button layoutX="442.0" layoutY="357.0" mnemonicParsing="false" onAction="#reject" text="Reject" />
       <Label layoutX="345.0" layoutY="28.0" text="Job Requests">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
+      <Button layoutX="413.0" layoutY="357.0" mnemonicParsing="false" onAction="#reject" text="Reject" />
+      <Label fx:id="alertlabel" layoutX="31.0" layoutY="411.0" prefHeight="26.0" prefWidth="323.0" />
    </children>
 </AnchorPane>

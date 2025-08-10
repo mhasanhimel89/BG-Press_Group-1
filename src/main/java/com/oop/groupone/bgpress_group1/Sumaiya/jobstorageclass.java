@@ -24,4 +24,27 @@ public class jobstorageclass {
             return new ArrayList<>();
         }
     }
+
+
+    private static final String FILE_PATH = "jobrequests.dat";
+
+    public static List<assignjobClass> loadRequests() {
+        List<assignjobClass> requests = new ArrayList<>();
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_PATH))) {
+            requests = (List<assignjobClass>) ois.readObject();
+        } catch (FileNotFoundException e) {
+            // File not found, return empty list
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return requests;
+    }
+
+    public static void saveRequests(List<assignjobClass> requests) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
+            oos.writeObject(requests);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

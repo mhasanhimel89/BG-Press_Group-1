@@ -1,5 +1,6 @@
 package com.oop.groupone.bgpress_group1.Sumaiya;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,10 +11,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 public class Hmdashboardcontroller
 {
     @javafx.fxml.FXML
     private MenuBar menu;
+
 
     @javafx.fxml.FXML
     public void initialize() {
