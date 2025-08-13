@@ -2,14 +2,14 @@
 
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.geometry.Insets?>
+
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.requisitions.RequisitionsController">
 
     <center>
         <HBox spacing="20" padding="10">
-            <!-- List of Requisitions -->
+
             <ListView fx:id="requisitionListView" prefWidth="200" />
 
             <!-- Details Section -->
