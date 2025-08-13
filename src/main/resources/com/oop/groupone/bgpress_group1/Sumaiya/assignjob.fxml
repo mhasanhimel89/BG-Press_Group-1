@@ -2,16 +2,18 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.Assignjobcontroller">
    <children>
@@ -40,23 +42,40 @@
             <Button mnemonicParsing="false" onAction="#signout" text="Signout" />
          </children>
       </VBox>
-      <TableView fx:id="tableview" layoutX="259.0" layoutY="154.0" prefHeight="142.0" prefWidth="346.0">
+      <TableView fx:id="tableview" layoutX="231.0" layoutY="260.0" prefHeight="136.0" prefWidth="306.0">
         <columns>
-          <TableColumn fx:id="tasklistcolumn" prefWidth="269.60003662109375" text="Task List" />
+          <TableColumn fx:id="jobnamecolumn" prefWidth="67.20001220703125" text="Job Name" />
+            <TableColumn fx:id="duedatecolumn" prefWidth="96.0" text="Due Date" />
+            <TableColumn fx:id="assignedstaffcolumn" prefWidth="141.5999755859375" text="Assigned Staff" />
         </columns>
       </TableView>
-      <ComboBox fx:id="jobidcombobox" layoutX="400.0" layoutY="329.0" prefWidth="150.0" />
-      <Button layoutX="475.0" layoutY="365.0" mnemonicParsing="false" onAction="#assignjob" text="Assign job" />
+      <ComboBox fx:id="Jobnamecombobox" layoutX="332.0" layoutY="98.0" prefWidth="150.0" />
+      <Button layoutX="384.0" layoutY="213.0" mnemonicParsing="false" onAction="#assignjob" text="Assign job" />
       <Label layoutX="330.0" layoutY="33.0" text="Assign Jobs to Staff">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="310.0" layoutY="333.0" text="Choose Job Id" />
-      <Label layoutX="259.0" layoutY="120.0" text="View Task">
+      <Label layoutX="221.0" layoutY="102.0" text="Choose Job Name:" />
+      <Label layoutX="230.0" layoutY="241.0" text="View Task">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <Label layoutX="246.0" layoutY="140.0" text="Assined Staff :" />
+      <TextField fx:id="assignedstafftf" layoutX="333.0" layoutY="136.0" />
+      <Label layoutX="267.0" layoutY="180.0" text="Due Date" />
+      <DatePicker fx:id="datepicker" layoutX="332.0" layoutY="176.0" />
+      <Button layoutX="325.0" layoutY="213.0" mnemonicParsing="false" onAction="#Add" text="Add" />
+      <ComboBox fx:id="jobtypecombobox" layoutX="624.0" layoutY="136.0" prefWidth="150.0" promptText="Job Name" />
+      <Button layoutX="626.0" layoutY="189.0" mnemonicParsing="false" onAction="#savebutton" text="Search" />
+      <Label layoutX="624.0" layoutY="102.0" text="Search Printing Job">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="715.0" layoutY="189.0" mnemonicParsing="false" onAction="#savebinary" text="Assign Printing Job" />
+      <Label fx:id="alertlabel" layoutX="14.0" layoutY="417.0" prefHeight="18.0" prefWidth="278.0" />
+      <Line endX="-1.20001220703125" endY="346.79998779296875" layoutX="574.0" layoutY="74.0" startX="-1.20001220703125" startY="27.600006103515625" />
    </children>
 </AnchorPane>
