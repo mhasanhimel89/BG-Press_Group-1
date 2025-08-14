@@ -14,7 +14,7 @@ public class SubmitRequisitionController {
     @FXML private Button submitButton;
     @FXML private Label statusLabel;
 
-    // Called when "Enter Details" button clicked
+
     @FXML
     private void handleEnterDetails() {
         boolean ok = enterDetails();
@@ -27,7 +27,7 @@ public class SubmitRequisitionController {
         }
     }
 
-    // Validate and enter details
+
     public boolean enterDetails() {
         try {
             String itemName = itemNameField.getText();
@@ -47,7 +47,7 @@ public class SubmitRequisitionController {
         }
     }
 
-    // Called when "Submit" button clicked
+
     @FXML
     private void handleSubmit() {
         boolean ok = submit();
@@ -60,7 +60,7 @@ public class SubmitRequisitionController {
         }
     }
 
-    // Logic to submit (DB/API placeholder)
+
     public boolean submit() {
         // TODO: Save to database or send to backend
         System.out.println("Submitting requisition...");
