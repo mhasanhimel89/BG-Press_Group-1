@@ -37,6 +37,7 @@ public class Assignjobcontroller
 
     private String filename="printdata.bin";
     private String assignjob="assignjob.bin";
+
     @javafx.fxml.FXML
     private Label alertlabel;
 

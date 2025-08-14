@@ -9,29 +9,32 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.Reportmachineissuescontroller">
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.Submitworkcontroller">
    <children>
-      <Label layoutX="373.0" layoutY="112.0" text="Machine ID" />
-      <Label layoutX="253.0" layoutY="209.0" prefHeight="50.0" prefWidth="225.0" text="Detailed Description Of the Problem">
+      <Label layoutX="307.0" layoutY="26.0" text="Submit Your Work">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="281.0" layoutY="217.0" />
-      <TextField fx:id="machineidtf" layoutX="489.0" layoutY="108.0" />
-      <ComboBox fx:id="issuetypecob" layoutX="496.0" layoutY="159.0" prefWidth="150.0" />
-      <TextArea fx:id="problemta" layoutX="493.0" layoutY="203.0" prefHeight="78.0" prefWidth="163.0" />
-      <Label layoutX="372.0" layoutY="163.0" text="Issue Type" />
-      <Button layoutX="407.0" layoutY="321.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="70.0" text="submit" />
-      <Label layoutX="319.0" layoutY="21.0" text="Report machine Issues">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <VBox layoutY="3.0" prefHeight="200.0" prefWidth="150.0">
+      <Label layoutX="279.0" layoutY="155.0" text="Choose Job" />
+      <ComboBox fx:id="jobCombobox" layoutX="358.0" layoutY="151.0" prefWidth="150.0" />
+      <Label layoutX="282.0" layoutY="208.0" text="Select File" />
+      <HBox layoutX="358.0" layoutY="208.0" prefHeight="34.0" prefWidth="220.0">
+         <children>
+            <TextField fx:id="filePathFied" editable="false" />
+            <Button mnemonicParsing="false" onAction="#handleBrowse" prefHeight="26.0" prefWidth="65.0" text="Browse" />
+         </children>
+      </HBox>
+      <Label layoutX="279.0" layoutY="256.0" text="Remarks" />
+      <TextArea fx:id="remarksArea" layoutX="358.0" layoutY="256.0" prefHeight="62.0" prefWidth="220.0" />
+      <Button layoutX="366.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
+      <Button layoutX="483.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+      <VBox prefHeight="200.0" prefWidth="164.0">
          <children>
             <MenuBar>
               <menus>
@@ -56,6 +59,6 @@
             <Button mnemonicParsing="false" onAction="#signout" text="Signout" />
          </children>
       </VBox>
-      <Label fx:id="alertlabel" layoutX="32.0" layoutY="411.0" prefHeight="18.0" prefWidth="276.0" />
+      <Label fx:id="alertlabel" layoutX="28.0" layoutY="419.0" prefHeight="18.0" prefWidth="301.0" />
    </children>
 </AnchorPane>

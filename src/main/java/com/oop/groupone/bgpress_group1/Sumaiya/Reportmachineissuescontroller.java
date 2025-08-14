@@ -8,29 +8,51 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class Reportmachineissuescontroller
 {
-    @javafx.fxml.FXML
-    private TextField jobnametf;
-    @javafx.fxml.FXML
-    private TableColumn issuetypecolumn;
     @javafx.fxml.FXML
     private ComboBox issuetypecob;
     @javafx.fxml.FXML
     private TextArea problemta;
     @javafx.fxml.FXML
-    private TableColumn jobnamecolumn;
+    private TextField machineidtf;
+
+    private static final String FILE_NAME = "issues.bin";
     @javafx.fxml.FXML
-    private TableView tableview;
+    private Label alertlabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+        issuetypecob.getItems().addAll("Paper Jam", "Low Ink / Toner" ,"Printing Misalignment", "Overheating",
+                "Strange Noise", "Software Error", "Network Connection Issue", "Power Failure", "Slow Performance",
+                "Other");
     }
 
     @javafx.fxml.FXML
     public void submit(ActionEvent actionEvent) {
+        String machineId = machineidtf.getText();
+        String issueType = issuetypecob.getValue().toString();
+        String description = problemta.getText();
+
+        if (machineId.isEmpty() || issueType==null) {
+            alertlabel.setText("Please fill all fields.");
+            return;
+        }
+
+        MachineIssue issue = new MachineIssue(machineId, issueType, description);
+
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME, true))) {
+            oos.writeObject(issue);
+            alertlabel.setText("Issue saved successfully!");
+        } catch (IOException e) {
+          alertlabel.setText("Something went wrong");
+        }
+
     }
 
     @javafx.fxml.FXML

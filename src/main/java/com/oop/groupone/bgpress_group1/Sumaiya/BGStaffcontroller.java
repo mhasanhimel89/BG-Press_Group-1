@@ -16,7 +16,13 @@ public class BGStaffcontroller
     }
 
     @javafx.fxml.FXML
-    public void feedback(ActionEvent actionEvent) {
+    public void feedback(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("stafffeedback.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -66,7 +72,13 @@ public class BGStaffcontroller
 
 
     @javafx.fxml.FXML
-    public void submitwork(ActionEvent actionEvent) {
+    public void submitwork(ActionEvent actionEvent)  throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("submitwork.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML

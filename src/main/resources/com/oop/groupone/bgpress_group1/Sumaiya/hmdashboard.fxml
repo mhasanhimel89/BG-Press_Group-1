@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.Hmdashboardcontroller">
    <children>
       <VBox layoutX="14.0" layoutY="12.0" prefHeight="370.0" prefWidth="236.0">
@@ -34,13 +33,13 @@
               </menus>
             </MenuBar>
             <Button mnemonicParsing="false" onAction="#scheduleoa" text="Review Daily Printing Schedule" />
-            <Button mnemonicParsing="false" onAction="#jobrequestsoa" text="Approve Job Requests" />
             <Button mnemonicParsing="false" onAction="#assignjoboa" text="Assign Jobs to Staff" />
+            <Button mnemonicParsing="false" onAction="#jobrequestsoa" text="Approve Job Requests" />
             <Button mnemonicParsing="false" onAction="#validateoa" text="Validate Budget and Resource Availibility" />
-            <Button mnemonicParsing="false" onAction="#generateoa" text="Generate Weekly Report" />
             <Button mnemonicParsing="false" onAction="#updateoa" text="Update Resource Inventory" />
-            <Button mnemonicParsing="false" onAction="#feedbackoa" text="Staff Feedback" />
+            <Button mnemonicParsing="false" onAction="#generateoa" text="Generate Weekly Report" />
             <Button mnemonicParsing="false" onAction="#viewfinancialsummaryoa" text="View Financial Summary" />
+            <Button mnemonicParsing="false" onAction="#feedbackoa" text="View Staff Feedback" />
             <Button mnemonicParsing="false" onAction="#signoutoa" text="Signout" />
          </children>
       </VBox>
