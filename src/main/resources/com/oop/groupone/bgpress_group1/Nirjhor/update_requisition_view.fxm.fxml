@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupone.bgpress_group1.Nirjhor.UpdateRequisitionController"
+            prefWidth="600" prefHeight="360">
+
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="16" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <padding>
+                <Insets top="20" right="24" bottom="20" left="24"/>
+            </padding>
+
+
+            <Label text="Update Requisition" style="-fx-font-size:20px; -fx-font-weight:bold;"/>
+
+
+            <GridPane hgap="10" vgap="8" maxWidth="520">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="40"/>
+                    <ColumnConstraints percentWidth="60"/>
+                </columnConstraints>
+
+                <Label text="Requisition ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="requisitionIdField" promptText="Enter ID" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Updated Quantity:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="updatedQuantityField" promptText="Enter quantity" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="New Delivery Date:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="newDeliveryDateField" promptText="YYYY-MM-DD" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Update Confirmed:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <CheckBox fx:id="updateConfirmedCheckBox" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+
+            <HBox spacing="10" alignment="CENTER_RIGHT" maxWidth="520">
+                <Button fx:id="modifyButton" text="Modify Requisition" onAction="#handleModifyRequisition"/>
+                <Button fx:id="confirmButton" text="Confirm Update" onAction="#handleConfirmUpdate" disable="true"/>
+            </HBox>
+
+
+            <Label fx:id="statusLabel" text="" wrapText="true" maxWidth="520"/>
+        </VBox>
+    </children>
+</AnchorPane>

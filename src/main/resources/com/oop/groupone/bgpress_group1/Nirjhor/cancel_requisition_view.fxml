@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupone.bgpress_group1.Nirjhor.CancelRequisitionController"
+            prefWidth="600" prefHeight="300">
+
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="16" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <padding>
+                <Insets top="20" right="24" bottom="20" left="24"/>
+            </padding>
+
+
+            <Label text="Cancel Requisition" style="-fx-font-size:20px; -fx-font-weight:bold;"/>
+
+
+            <GridPane hgap="10" vgap="8" maxWidth="520">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="35"/>
+                    <ColumnConstraints percentWidth="65"/>
+                </columnConstraints>
+
+                <Label text="Requisition ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="requisitionIdField" promptText="Enter requisition ID" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Cancellation Reason:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="cancellationReasonField" promptText="Enter reason" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Cancelled:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <CheckBox fx:id="isCancelledCheckBox" disable="true" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+
+
+            <HBox spacing="10" alignment="CENTER_RIGHT" maxWidth="520">
+                <Button fx:id="cancelButton" text="Cancel Requisition" onActio
