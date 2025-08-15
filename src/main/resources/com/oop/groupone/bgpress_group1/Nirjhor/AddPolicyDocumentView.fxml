@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.AddPolicyDocumentController"
+      spacing="12" alignment="TOP_LEFT" padding="20">
+
+    <Label text="Add Policy Document" style="-fx-font-size:18; -fx-font-weight:bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Policy ID:" minWidth="120"/>
+        <TextField fx:id="txtPolicyId" promptText="Enter policy ID"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Document Title:" minWidth="120"/>
+        <TextField fx:id="txtDocumentTitle" promptText="Enter document title"/>
+    </HBox>
+
+    <CheckBox fx:id="chkIsUploaded" text="Uploaded"/>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="Upload Policy" onAction="#uploadPolicy"/>
+        <Button text="Confirm Upload" onAction="#confirmUpload"/>
+    </HBox>
+
+    <Label fx:id="lblStatus" style="-fx-text-fill:green; -fx-font-weight:bold;"/>
+</VBox>

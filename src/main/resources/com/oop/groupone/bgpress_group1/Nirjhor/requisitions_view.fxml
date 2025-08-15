@@ -12,7 +12,7 @@
 
             <ListView fx:id="requisitionListView" prefWidth="200" />
 
-            <!-- Details Section -->
+
             <VBox spacing="10">
                 <Label text="Requisition Details:" style="-fx-font-weight: bold;"/>
                 <Label fx:id="requisitionDetailsLabel" wrapText="true" />

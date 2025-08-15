@@ -47,14 +47,14 @@ public class CancelRequisitionController {
         }
     }
 
-    // Called when "Show Confirmation" button clicked
+
     @FXML
     private void handleShowConfirmation() {
         String message = showConfirmation();
         statusLabel.setText(message);
     }
 
-    // Return confirmation message
+
     public String showConfirmation() {
         int id;
         try {
