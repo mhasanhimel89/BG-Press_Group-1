@@ -49,7 +49,7 @@ public class Submitworkcontroller
         if (selectedJob == null || filePath.isEmpty()) {
             alertlabel.setText("Please select a job and a file.");
         }
-         alertlabel.setText("your work submitted successfully");
+         alertlabel.setText("your work submitted successfully, Please Update now!");
 
     }
 
@@ -76,6 +76,16 @@ public class Submitworkcontroller
     public void home(ActionEvent actionEvent) throws IOException {
         Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Parent root= FXMLLoader.load(getClass().getResource("BGStaff.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void updateprogres(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root= FXMLLoader.load(getClass().getResource("updateProgress.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("new Scene");
         stage.setScene(scene);

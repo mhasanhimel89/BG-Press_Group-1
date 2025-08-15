@@ -43,7 +43,7 @@
             <Button mnemonicParsing="false" onAction="#signoutoa" text="Signout" />
          </children>
       </VBox>
-      <Label layoutX="400.0" layoutY="35.0" text="Dashboard">
+      <Label layoutX="352.0" layoutY="35.0" text="Head manager Dashboard">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>

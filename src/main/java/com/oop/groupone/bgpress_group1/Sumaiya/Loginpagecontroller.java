@@ -21,7 +21,7 @@ public class Loginpagecontroller
     @javafx.fxml.FXML
     private Label alertlabel;
     @javafx.fxml.FXML
-    private ComboBox accountypecb;
+    private ComboBox<String> accountypecb;
     @javafx.fxml.FXML
     private TextField useridTextfield;
     @javafx.fxml.FXML
@@ -51,6 +51,7 @@ public class Loginpagecontroller
 
             String userId = useridTextfield.getText();
             String password = passwordtextfield.getText();
+            String accountype= accountypecb.getValue().toString();
 
             try (BufferedReader reader = new BufferedReader(new FileReader("users.txt"))) {
                 String line;
@@ -68,7 +69,7 @@ public class Loginpagecontroller
                             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                             Parent root = null;
 
-                            if (role.equalsIgnoreCase("Head Manager")) {
+                            if (role.equalsIgnoreCase("Head Manager") && accountype.equals(role)) {
 
                                 URL fxmlUrl = getClass().getResource("hmdashboard.fxml");
                                 if (fxmlUrl == null) {
@@ -78,7 +79,8 @@ public class Loginpagecontroller
                                 root = FXMLLoader.load(fxmlUrl);
                                 stage.setTitle("Head Manager Dashboard");
 
-                            } else if (role.equalsIgnoreCase("Bg Staff")) {
+
+                            } else if (role.equalsIgnoreCase("Bg Staff") && accountype.equals(role) ) {
                                 URL fxmlUrl = getClass().getResource("BGStaff.fxml");
                                 if (fxmlUrl == null) {
 
@@ -88,6 +90,7 @@ public class Loginpagecontroller
                                 root = FXMLLoader.load(fxmlUrl);
                                 stage.setTitle("BG Staff");
                             }
+
 
 
                             Scene scene = new Scene(root);
@@ -105,37 +108,6 @@ public class Loginpagecontroller
             }
         }
 
-//        String userid = useridTextfield.getText();
-//        String password = passwordtextfield.getText();
-//        String role = String.valueOf(accountypecb.getValue());
-//        if (userid.isEmpty() && password.isEmpty() && role == null ) {
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setTitle("Error");
-//            alert.setHeaderText("Error Handling");
-//            alert.setContentText("Please fillup all field");
-//            alert.showAndWait();
-//            return;
-//        }
-//
-//        if (userid.equals("admin") && Objects.equals(password, "admin1234") && Objects.equals(role, "System Admin") ||
-//                userid.equals("HeadManager") && Objects.equals(password, "headmanager1234") && Objects.equals(role, "Head Manager") ||
-//                userid.equals("BGStaff") && Objects.equals(password, "bgstaff1234") && Objects.equals(role, "Bg Staff")){
-//
-//            Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-//            Parent root= FXMLLoader.load(getClass().getResource("HeadManagerDashboard.fxml"));
-//            Scene scene = new Scene(root);
-//            stage.setTitle("new Scene");
-//            stage.setScene(scene);
-//            stage.show();
-//
-//
-//        } else {
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setTitle("Error");
-//            alert.setHeaderText("Error Handling");
-//            alert.setContentText("Please enter a valid username and password");
-//            alert.showAndWait();
-//        }
 
 }
 

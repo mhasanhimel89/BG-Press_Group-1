@@ -80,7 +80,7 @@ public class StartPrintingcontroller
         alert.setHeaderText(null);
         alert.setContentText("Job '"  + "' marked as started and saved.");
         alert.showAndWait();
-        alertlabel.setText("Saved to binary file");
+        alertlabel.setText("Saved to binary file & you will now update progress");
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("UpdateProgress.fxml"));
         Parent root = loader.load();

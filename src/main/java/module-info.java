@@ -1,6 +1,9 @@
 module com.oop.groupone.bgpress_group1 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
+    requires kernel;
+    requires layout;
 
 
     opens com.oop.groupone.bgpress_group1 to javafx.fxml;

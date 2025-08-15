@@ -50,6 +50,20 @@ public class CreateAccPagecontroller
 
     @javafx.fxml.FXML
     public void createaccountbuttononaction(ActionEvent actionEvent) {
+        String pass=passwordtextfield.getText();
+
+        if (pass.length()!=7) {
+            alertlabel.setText("Password must be 7 digits only.");
+            return;
+        }
+
+
+        if (accountytpecombobox.getValue() == null) {
+            alertlabel.setText("Please select an account type.");
+            return;
+        }
+
+
 
         String userId=nametextfield.getText();
         String email=emailtextfield.getText();

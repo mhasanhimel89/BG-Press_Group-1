@@ -81,11 +81,10 @@ public class UpdateProgresscontroller
             while(true){
 
                 assignjobClass view=(assignjobClass) stream.readObject();
-               // tableview.getItems().add(view);
             }
 
         }catch(EOFException e) {
-            alertlabel.setText("Loaded");
+            alertlabel.setText("Loaded from start printing");
         }catch (IOException e){
             alertlabel.setText("Couldn't Load");
             e.printStackTrace();

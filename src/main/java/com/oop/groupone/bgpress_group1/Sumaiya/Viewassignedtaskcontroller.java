@@ -34,7 +34,6 @@ public class Viewassignedtaskcontroller
         Assignedstaffcolumn.setCellValueFactory(new PropertyValueFactory<>("assignstaff"));
         duedatecolumn.setCellValueFactory(new PropertyValueFactory<>("duedate"));
     }
-    ArrayList<assignjobClass> ViewtaskList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void load(ActionEvent actionEvent) {
