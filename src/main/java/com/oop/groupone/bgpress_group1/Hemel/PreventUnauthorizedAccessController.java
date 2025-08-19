@@ -1,8 +1,14 @@
 package com.oop.groupone.bgpress_group1.Hemel;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 
 public class PreventUnauthorizedAccessController
@@ -59,6 +65,17 @@ public class PreventUnauthorizedAccessController
         );
 
     }
+
+    @javafx.fxml.FXML
+    public void nextOnButton(ActionEvent actionEvent) throws IOException  {
+        Stage stage=(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("SecurityProtocols.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("new Scene");
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
 
 

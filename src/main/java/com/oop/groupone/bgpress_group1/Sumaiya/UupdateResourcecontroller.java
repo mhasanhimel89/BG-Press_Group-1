@@ -6,34 +6,39 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.EOFException;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 
 public class UupdateResourcecontroller
 {
     @javafx.fxml.FXML
     private MenuBar menubar;
     @javafx.fxml.FXML
-    private TableView<validateBR> tableview;
+    private ComboBox resourcecb;
     @javafx.fxml.FXML
-    private TableColumn<validateBR,Integer> quantitycolumn;
+    private TableColumn itemscolumn;
     @javafx.fxml.FXML
-    private TableColumn<validateBR,Double> budgetcolumn;
+    private TableView tableview;
     @javafx.fxml.FXML
-    private TableColumn<validateBR, String> resourcecolumn;
+    private TextField quantitytf;
     @javafx.fxml.FXML
-    private Label alertlabel;
+    private TextArea budgetta;
+    @javafx.fxml.FXML
+    private TableColumn quantitycolumn;
+    @javafx.fxml.FXML
+    private TextField upbudgettf;
 
     @javafx.fxml.FXML
     public void initialize() {
-        resourcecolumn.setCellValueFactory(new PropertyValueFactory<>("resourcename"));
-        quantitycolumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        budgetcolumn.setCellValueFactory(new PropertyValueFactory<>("budget"));
+    }
+
+    @javafx.fxml.FXML
+    public void updatebutton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void save(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -54,25 +59,5 @@ public class UupdateResourcecontroller
         stage.setTitle("new Scene");
         stage.setScene(scene);
         stage.show();
-    }
-
-    @javafx.fxml.FXML
-    public void laod(ActionEvent actionEvent) {
-        try(ObjectInputStream stream = new ObjectInputStream(new FileInputStream("validate.bin"))){
-            while(true){
-
-                validateBR load=(validateBR) stream.readObject();
-                tableview.getItems().add(load);
-            }
-
-        }catch(EOFException e) {
-            alertlabel.setText("Loaded");
-        }catch (IOException e){
-            alertlabel.setText("Couldn't Load");
-            e.printStackTrace();
-        }catch (ClassNotFoundException e) {
-            alertlabel.setText("something went wrong");
-            e.printStackTrace();
-        }
     }
 }

@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.oop.groupone.bgpress_group1.Hemel.ViewIncidentReportsController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="635.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Hemel.ViewIncidentReportsController">
+   <children>
+      <Label layoutX="255.0" layoutY="38.0" text="View Incident Reports">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="119.0" text="Filter Date:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="196.0" text="Filter Location:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="402.0" layoutY="118.0" text="Filter Type:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="63.0" layoutY="265.0" mnemonicParsing="false" onAction="#filterReportsOnButton" prefHeight="84.0" prefWidth="230.0" text="Filter Reports">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="402.0" layoutY="265.0" mnemonicParsing="false" onAction="#displayReportsOnButton" prefHeight="84.0" prefWidth="230.0" text="Display Reports">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="reportsTableView" layoutX="63.0" layoutY="382.0" prefHeight="198.0" prefWidth="482.0">
+         <columns>
+            <TableColumn fx:id="dateCol" prefWidth="93.59997940063477" text="Date" />
+            <TableColumn fx:id="locationCol" prefWidth="91.20001220703125" text="Location" />
+            <TableColumn fx:id="typeCol" prefWidth="103.19999694824219" text="Type" />
+            <TableColumn fx:id="detailsCol" prefWidth="191.20001220703125" text="Details" />
+         </columns>
+      </TableView>
+      <DatePicker fx:id="filterDatePicker" layoutX="165.0" layoutY="115.0" prefHeight="35.0" prefWidth="197.0" />
+      <TextField fx:id="filterLocationField" layoutX="199.0" layoutY="192.0" prefHeight="35.0" prefWidth="187.0" />
+      <ComboBox fx:id="filterTypeComboBox" layoutX="504.0" layoutY="115.0" prefHeight="35.0" prefWidth="181.0" />
+      <Button layoutX="581.0" layoutY="519.0" mnemonicParsing="false" onAction="#nextOnButton" prefHeight="58.0" prefWidth="138.0" text="Next" />
+   </children>
 </AnchorPane>

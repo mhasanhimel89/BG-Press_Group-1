@@ -5,18 +5,29 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+
 
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.StartPrintingcontroller">
    <children>
-      <Button layoutX="228.0" layoutY="106.0" mnemonicParsing="false" onAction="#loadbutton" prefHeight="26.0" prefWidth="64.0" text="Load" />
-      <Button layoutX="306.0" layoutY="382.0" mnemonicParsing="false" onAction="#startbutton" prefHeight="33.0" prefWidth="135.0" text="Start">
+      <Label fx:id="jobid" layoutX="247.0" layoutY="120.0" prefHeight="76.0" prefWidth="170.0" text="Job Id :">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="jobname" layoutX="444.0" layoutY="138.0" prefHeight="40.0" prefWidth="363.0" text="Job Name:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="252.0" layoutY="234.0" mnemonicParsing="false" onAction="#loadbutton" prefHeight="40.0" prefWidth="79.0" text="Load">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="427.0" layoutY="237.0" mnemonicParsing="false" onAction="#startbutton" prefHeight="33.0" prefWidth="135.0" text="Confirm Start">
          <font>
             <Font size="17.0" />
          </font>
@@ -42,30 +53,13 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <Button mnemonicParsing="false" onAction="#homebutton" text="Home" />
-            <Button mnemonicParsing="false" onAction="#signoutbutton" text="signout" />
+            <Button mnemonicParsing="false" onAction="#home" text="Home" />
+            <Button mnemonicParsing="false" onAction="#signout" text="signout" />
          </children>
       </VBox>
       <Label layoutX="292.0" layoutY="30.0" text="Start Printing Job">
          <font>
             <Font name="System Bold" size="23.0" />
-         </font>
-      </Label>
-      <TableView fx:id="tableview" layoutX="228.0" layoutY="148.0" prefHeight="207.0" prefWidth="250.0">
-        <columns>
-          <TableColumn fx:id="jobnamecolumn" prefWidth="75.0" text="Job Name" />
-          <TableColumn fx:id="duedatecolumn" prefWidth="75.0" text="Due date" />
-            <TableColumn fx:id="assignstaffcolumn" prefWidth="95.20001220703125" text="Assigned staff" />
-        </columns>
-      </TableView>
-      <Label fx:id="alertlabel" layoutX="33.0" layoutY="420.0" prefHeight="17.0" prefWidth="283.0" />
-      <Label layoutX="559.0" layoutY="154.0" text="Staff Id:" />
-      <TextField fx:id="staffidtf" layoutX="613.0" layoutY="150.0" />
-      <Line endX="-81.5999755859375" endY="5.600006103515625" layoutX="600.0" layoutY="88.0" startX="-81.5999755859375" startY="272.0" />
-      <Button layoutX="556.0" layoutY="189.0" mnemonicParsing="false" onAction="#searchbutton" prefHeight="26.0" prefWidth="86.0" text="Search" />
-      <Label layoutX="557.0" layoutY="112.0" text="Search Your id/Name">
-         <font>
-            <Font name="System Bold" size="11.0" />
          </font>
       </Label>
    </children>

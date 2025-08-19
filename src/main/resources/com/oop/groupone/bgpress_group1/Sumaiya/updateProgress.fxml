@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -11,16 +10,26 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Sumaiya.UpdateProgresscontroller">
    <children>
-      <ComboBox fx:id="progresscombobox" layoutX="281.0" layoutY="243.0" prefWidth="150.0" />
-      <Button layoutX="452.0" layoutY="298.0" mnemonicParsing="false" onAction="#updatebutton" prefHeight="40.0" prefWidth="110.0" text="Update progress" />
-      <Label fx:id="jobnamelabel" layoutX="269.0" layoutY="105.0" prefHeight="31.0" prefWidth="280.0">
+      <ComboBox fx:id="jobnamecombobox" layoutX="366.0" layoutY="119.0" prefWidth="150.0" />
+      <Label fx:id="progresslabel" layoutX="252.0" layoutY="169.0" prefHeight="88.0" prefWidth="283.0" text="Progress of the job">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="336.0" layoutY="287.0" mnemonicParsing="false" onAction="#updatebutton" text="Update progress">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="252.0" layoutY="116.0" text="Job Name">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="269.0" layoutY="21.0" text="Update Job Progress">
+      <Label layoutX="269.0" layoutY="42.0" text="Update Job Progress">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
@@ -50,33 +59,5 @@
             <Button mnemonicParsing="false" onAction="#signout" text="Signout" />
          </children>
       </VBox>
-      <Label fx:id="alertlabel" layoutX="50.0" layoutY="414.0" prefHeight="0.0" prefWidth="280.0" />
-      <Label fx:id="assignstafflabel" layoutX="320.0" layoutY="198.0" prefHeight="30.0" prefWidth="263.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="176.0" layoutY="107.0" text="Job Name:">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="176.0" layoutY="156.0" text="Due Date:">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="176.0" layoutY="199.0" text="Assigned Staff :">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="179.0" layoutY="242.0" text="Progress :">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Button layoutX="734.0" layoutY="410.0" mnemonicParsing="false" onAction="#saveupdateoa" text="Save Update" />
-      <DatePicker fx:id="duedate" layoutX="268.0" layoutY="157.0" />
    </children>
 </AnchorPane>

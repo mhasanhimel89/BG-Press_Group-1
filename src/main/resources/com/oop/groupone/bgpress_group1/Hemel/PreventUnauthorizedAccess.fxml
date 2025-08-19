@@ -8,23 +8,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="476.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Hemel.PreventUnauthorizedAccessController">
+<AnchorPane prefHeight="505.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Hemel.PreventUnauthorizedAccessController">
    <children>
-      <Label layoutX="54.0" layoutY="64.0" text="Clearance Level:" />
-      <Label layoutX="54.0" layoutY="112.0" text="Monitoring Zone:" />
-      <Label layoutX="394.0" layoutY="112.0" text="Is Unauthorized:" />
-      <Label layoutX="394.0" layoutY="64.0" text="Timestamp:" />
-      <Label fx:id="resultLabel" layoutX="54.0" layoutY="361.0" text="Result">
+      <Label layoutX="54.0" layoutY="112.0" text="Clearance Level:" />
+      <Label layoutX="50.0" layoutY="171.0" text="Monitoring Zone:" />
+      <Label layoutX="384.0" layoutY="171.0" text="Is Unauthorized:" />
+      <Label layoutX="384.0" layoutY="112.0" text="Timestamp:" />
+      <Label fx:id="resultLabel" layoutX="54.0" layoutY="379.0" text="Result">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="clearanceLevelField" layoutX="179.0" layoutY="60.0" />
-      <TextField fx:id="monitoringZoneField" layoutX="179.0" layoutY="108.0" />
-      <DatePicker fx:id="timestampDP" layoutX="474.0" layoutY="60.0" />
-      <CheckBox fx:id="isUnauthorizedCB" layoutX="506.0" layoutY="112.0" mnemonicParsing="false" text="CheckBox" />
-      <Button layoutX="51.0" layoutY="213.0" mnemonicParsing="false" onAction="#monitorAccessOnButton" prefHeight="76.0" prefWidth="191.0" text="Monitor Access" />
-      <Button layoutX="384.0" layoutY="213.0" mnemonicParsing="false" onAction="#generateIncidentReportOnButton" prefHeight="76.0" prefWidth="191.0" text="Generate Incident Report" />
+      <TextField fx:id="clearanceLevelField" layoutX="179.0" layoutY="108.0" />
+      <TextField fx:id="monitoringZoneField" layoutX="179.0" layoutY="167.0" />
+      <DatePicker fx:id="timestampDP" layoutX="464.0" layoutY="108.0" />
+      <CheckBox fx:id="isUnauthorizedCB" layoutX="500.0" layoutY="171.0" mnemonicParsing="false" text="CheckBox" />
+      <Button layoutX="51.0" layoutY="251.0" mnemonicParsing="false" onAction="#monitorAccessOnButton" prefHeight="76.0" prefWidth="191.0" text="Monitor Access" />
+      <Button layoutX="384.0" layoutY="251.0" mnemonicParsing="false" onAction="#generateIncidentReportOnButton" prefHeight="76.0" prefWidth="191.0" text="Generate Incident Report" />
+      <Label layoutX="189.0" layoutY="28.0" text="PreventUnauthorizedAccess">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="420.0" layoutY="406.0" mnemonicParsing="false" onAction="#nextOnButton" prefHeight="35.0" prefWidth="85.0" text="Next" />
    </children>
 </AnchorPane>

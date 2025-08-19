@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.oop.groupone.bgpress_group1.Hemel.MonitorAccessLogsController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="604.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Hemel.MonitorAccessLogsController">
+   <children>
+      <Label layoutX="278.0" layoutY="52.0" text="Monitor Access Logs">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="108.0" text="Start Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="183.0" text="End Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="430.0" layoutY="108.0" text="Valid Range:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="62.0" layoutY="262.0" mnemonicParsing="false" onAction="#fetchLogsOnButton" prefHeight="90.0" prefWidth="253.0" text="Fetch Logs">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="440.0" layoutY="262.0" mnemonicParsing="false" onAction="#displayAccessLogsOnButton" prefHeight="90.0" prefWidth="253.0" text="Display Access Logs">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="logsTableView" layoutX="70.0" layoutY="376.0" prefHeight="200.0" prefWidth="415.0">
+         <columns>
+            <TableColumn fx:id="timeColumn" prefWidth="123.99999237060547" text="Time" />
+            <TableColumn fx:id="userColumn" prefWidth="132.0" text="User" />
+            <TableColumn fx:id="actionColumn" prefWidth="160.79998779296875" text="Action" />
+         </columns>
+      </TableView>
+      <TextField fx:id="startTimeField" layoutX="163.0" layoutY="104.0" prefHeight="35.0" prefWidth="183.0" />
+      <TextField fx:id="endTimeField" layoutX="163.0" layoutY="179.0" prefHeight="35.0" prefWidth="183.0" />
+      <CheckBox fx:id="isValidRangeCB" layoutX="552.0" layoutY="108.0" mnemonicParsing="false" text="CheckBox">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="597.0" layoutY="436.0" mnemonicParsing="false" onAction="#nextOnButton" prefHeight="63.0" prefWidth="142.0" text="Next" />
+   </children>
 </AnchorPane>

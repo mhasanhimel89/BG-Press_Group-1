@@ -1,49 +1,42 @@
 package com.oop.groupone.bgpress_group1.Sumaiya;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.List;
 
 public class Schedulecontroller
 {
     @javafx.fxml.FXML
-    private TableColumn<assignjobClass, String> assignedstaffcolumn;
+    private TableColumn assignedstaffcolumn;
+    @javafx.fxml.FXML
+    private DatePicker choosedate;
+    @javafx.fxml.FXML
+    private TableColumn statuscolumn;
     @javafx.fxml.FXML
     private MenuBar menubar;
     @javafx.fxml.FXML
-    private TableColumn<assignjobClass, String> jobnamecolumn;
+    private DatePicker duedate;
     @javafx.fxml.FXML
-    private TableView<assignjobClass> tableview;
+    private TableColumn jobnamecolumn;
     @javafx.fxml.FXML
-    private TableColumn<assignjobClass, LocalDate> duedatecolumn;
+    private TableView tableview;
     @javafx.fxml.FXML
-    private TableColumn<assignjobClass,String> progresscolumn;
+    private TableColumn duedatecolumn;
+    @javafx.fxml.FXML
+    private TextField statustf;
+    @javafx.fxml.FXML
+    private TextField jobnametextfield;
+    @javafx.fxml.FXML
+    private TextField assignedstafftf;
 
     @javafx.fxml.FXML
     public void initialize() {
-        jobnamecolumn.setCellValueFactory(new PropertyValueFactory<>("jobname"));
-        assignedstaffcolumn.setCellValueFactory(new PropertyValueFactory<>("assignstaff"));
-        duedatecolumn.setCellValueFactory(new PropertyValueFactory<>("duedate"));
-        progresscolumn.setCellValueFactory(new PropertyValueFactory<>("progress"));
-
-        loadTableData();
-    }
-
-    private void loadTableData() {
-        List<assignjobClass> jobs = jobstorageclass.loadJobs();
-        ObservableList<assignjobClass> observableJobs = FXCollections.observableArrayList(jobs);
-        tableview.setItems(observableJobs);
     }
 
     @javafx.fxml.FXML
@@ -57,6 +50,9 @@ public class Schedulecontroller
 
     }
 
+    @javafx.fxml.FXML
+    public void saveoa(ActionEvent actionEvent) {
+    }
 
     @javafx.fxml.FXML
     public void hmanagerdashboardoa(ActionEvent actionEvent) throws IOException {
@@ -69,9 +65,7 @@ public class Schedulecontroller
 
     }
 
-
     @javafx.fxml.FXML
-    public void Loadoa(ActionEvent actionEvent) {
-        //loadTableData();
+    public void duedateoa(ActionEvent actionEvent) {
     }
 }

@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.oop.groupone.bgpress_group1.Hemel.SecureWorkingEnvironmentController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane onDragDetected="#backOnButton" prefHeight="599.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Hemel.SecureWorkingEnvironmentController">
+   <children>
+      <Label layoutX="233.0" layoutY="46.0" text="Secure Working Environment">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="123.0" text="Secured Zone:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="196.0" text="Emergency System Ready:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="402.0" text="Incident Logs:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="55.0" layoutY="276.0" mnemonicParsing="false" onAction="#loadWorkplaceSecurityOnButton" prefHeight="82.0" prefWidth="250.0" text="Load Workplace Security">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="387.0" layoutY="276.0" mnemonicParsing="false" onAction="#validateEmergencySystemsOnButton" prefHeight="82.0" prefWidth="278.0" text="Validate Emergany Systems">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="securedZoneField" layoutX="211.0" layoutY="114.0" prefHeight="45.0" prefWidth="218.0" />
+      <TextArea fx:id="incidentLogsArea" layoutX="180.0" layoutY="370.0" prefHeight="200.0" prefWidth="297.0" />
+      <CheckBox fx:id="emergencySystemReadyYesCB" layoutX="281.0" layoutY="196.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="94.0" text="Yes">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="emergencySystemReadyNoCB" layoutX="382.0" layoutY="196.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="94.0" text="No">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="526.0" layoutY="470.0" mnemonicParsing="false" onAction="#nextOnButton" prefHeight="74.0" prefWidth="218.0" text="Next" />
+   </children>
 </AnchorPane>

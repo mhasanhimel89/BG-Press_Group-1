@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.oop.groupone.bgpress_group1.Hemel.SecurityOfficerController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="538.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupone.bgpress_group1.Hemel.SecurityOfficerController">
+   <children>
+      <Label layoutX="237.0" layoutY="43.0" text="Security Officer Login">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="124.0" text="User ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="182.0" text="Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="241.0" text="Role:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" layoutX="48.0" layoutY="413.0" text="Please enter your details and log in">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="48.0" layoutY="302.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="62.0" prefWidth="269.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="userIDField" layoutX="159.0" layoutY="114.0" prefHeight="46.0" prefWidth="210.0" />
+      <TextField fx:id="nameField" layoutX="159.0" layoutY="172.0" prefHeight="46.0" prefWidth="210.0" />
+      <TextField fx:id="roleField" layoutX="159.0" layoutY="231.0" prefHeight="46.0" prefWidth="210.0" />
+      <Button layoutX="541.0" layoutY="427.0" mnemonicParsing="false" onAction="#nextOnButton" prefHeight="46.0" prefWidth="126.0" text="Next" />
+      <Button layoutX="382.0" layoutY="333.0" mnemonicParsing="false" onAction="#MaintainPhysicalEnvironmentOnButton" prefHeight="70.0" prefWidth="330.0" text="MaintainPhysicalEnvironment" />
+   </children>
 </AnchorPane>
