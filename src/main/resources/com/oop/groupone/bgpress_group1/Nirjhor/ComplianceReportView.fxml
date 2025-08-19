@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.ComplianceReportController"
+      spacing="12" alignment="TOP_LEFT" padding="20">
+
+    <Label text="Compliance Report" style="-fx-font-size:18; -fx-font-weight:bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Report ID:" minWidth="120"/>
+        <TextField fx:id="txtReportId" promptText="Enter report ID"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Report Type:" minWidth="120"/>
+        <TextField fx:id="txtReportType" promptText="Enter report type"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Compliance Score:" minWidth="120"/>
+        <TextField fx:id="txtComplianceScore" promptText="0.0 - 100.0"/>
+    </HBox>
+
+    <CheckBox fx:id="chkIsPrinted" text="Printed"/>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="View Report" onAction="#viewReport"/>
+        <Button text="Print Report" onAction="#printReport"/>
+    </HBox>
+
+    <TextArea fx:id="txtReportDetails" prefRowCount="6" prefColumnCount="30" promptText="Report details..."/>
+</VBox>

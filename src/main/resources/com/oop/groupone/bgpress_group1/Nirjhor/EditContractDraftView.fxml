@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.EditContractDraftController"
+      spacing="12" alignment="TOP_LEFT" padding="20">
+
+    <Label text="Edit Contract Draft" style="-fx-font-size:18; -fx-font-weight:bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Draft ID:" minWidth="120"/>
+        <TextField fx:id="txtDraftId" promptText="Enter draft ID"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Changed Sections:" minWidth="120"/>
+        <TextArea fx:id="txtChangedSections" prefRowCount="4" prefColumnCount="25"/>
+    </HBox>
+
+    <CheckBox fx:id="chkHasHighlightedChanges" text="Highlighted Changes"/>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="Edit Draft" onAction="#editDraft"/>
+        <Button text="Save Draft" onAction="#saveDraft"/>
+    </HBox>
+
+    <Label fx:id="lblStatus" style="-fx-text-fill:green; -fx-font-weight:bold;"/>
+</VBox>

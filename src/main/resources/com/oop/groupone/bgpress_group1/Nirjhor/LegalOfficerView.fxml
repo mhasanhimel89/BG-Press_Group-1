@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.LegalOfficerController"
+      spacing="12" alignment="TOP_LEFT" padding="20">
+
+    <Label text="Legal Officer Login" style="-fx-font-size:18; -fx-font-weight:bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Username:" minWidth="100"/>
+        <TextField fx:id="txtUsername" promptText="Enter username"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Password:" minWidth="100"/>
+        <PasswordField fx:id="txtPassword" promptText="Enter password"/>
+    </HBox>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="Login" onAction="#login"/>
+        <Button text="Access Dashboard" onAction="#accessDashboard"/>
+    </HBox>
+
+    <Label fx:id="lblStatus" style="-fx-text-fill:green; -fx-font-weight:bold;"/>
+
+</VBox>

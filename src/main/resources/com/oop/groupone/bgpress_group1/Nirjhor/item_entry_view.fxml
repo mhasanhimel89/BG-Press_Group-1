@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupone.bgpress_group1.Nirjhor.ItemController"
+            prefWidth="600" prefHeight="360">
+
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="16" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <padding>
+                <Insets top="20" right="24" bottom="20" left="24"/>
+            </padding>
+
+            <!-- Header -->
+            <Label text="Item Entry Form" style="-fx-font-size:20px; -fx-font-weight:bold;"/>
+
+            <!-- Item Details -->
+            <GridPane hgap="10" vgap="8" maxWidth="520">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="35"/>
+                    <ColumnConstraints percentWidth="65"/>
+                </columnConstraints>
+
+                <Label text="Item Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="itemNameField" promptText="Enter item name" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Quantity:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="quantityField" promptText="Enter quantity" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Priority:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="priorityChoiceBox" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="High"/>
+                            <String fx:value="Medium"/>
+                            <String fx:value="Low"/>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+
+                <Label text="Delivery Date:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="deliveryDateField" promptText="YYYY-MM-DD" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <!-- Buttons -->
+            <HBox spacing="10" alignment="CENTER_RIGHT" maxWidth="520">
+                <Button fx:id="enterButton" text="Enter Details" onAction="#handleEnterDetails"/>
+                <Button fx:id="submitButton" text="Submit" onAction="#handleSubmit" disable="true"/>
+            </HBox>
+
+            <!-- Status Label -->
+            <Label fx:id="statusLabel" text="" wrapText="true" maxWidth="520"/>
+        </VBox>
+    </children>
+</AnchorPane>

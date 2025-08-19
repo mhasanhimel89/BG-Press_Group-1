@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="your.package.RequisitionController"
+      spacing="10" alignment="CENTER" padding="20">
+
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Requisition ID:"/>
+        <TextField fx:id="txtRequisitionId" promptText="Enter ID"/>
+    </HBox>
+
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Requisition List:"/>
+        <TextArea fx:id="txtRequisitionList" prefRowCount="5" prefColumnCount="20"/>
+    </HBox>
+
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Pending Status:"/>
+        <CheckBox fx:id="chkIsPending"/>
+    </HBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Fetch Requisitions" onAction="#fetchRequisitions"/>
+        <Button text="Display Details" onAction="#displayDetails"/>
+    </HBox>
+
+</VBox>

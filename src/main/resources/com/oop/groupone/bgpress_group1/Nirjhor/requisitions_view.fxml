@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.requisitions.RequisitionsController">
+
+    <center>
+        <HBox spacing="20" padding="10">
+
+            <ListView fx:id="requisitionListView" prefWidth="200" />
+
+
+            <VBox spacing="10">
+                <Label text="Requisition Details:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="requisitionDetailsLabel" wrapText="true" />
+            </VBox>
+        </HBox>
+    </center>
+
+</BorderPane>
